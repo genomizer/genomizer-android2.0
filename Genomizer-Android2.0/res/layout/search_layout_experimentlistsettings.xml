@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/genomizer_white">
+
+    <TextView
+        android:id="@+id/search_tv_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="7dp"
+        android:layout_below="@+id/search_tv_setVisibleAnnotations"
+        android:background="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/search_tv_setVisibleAnnotations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:text="@string/search_btn_setVisibleAnnotations"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    
+    <ListView
+        android:id="@+id/search_lv_resultAnnotationsSettings"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/search_tv_divider"
+        android:background="@color/white"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_settings_sort"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/search_lv_resultAnnotationsSettings" >
+
+        <TextView
+            android:id="@+id/search_tv_setSortAnnotations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:text="@string/search_tv_sortBy"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/search_tv_dividerbottom"
+            android:layout_width="fill_parent"
+            android:layout_height="7dp"
+            android:layout_below="@+id/search_tv_setSortAnnotations"
+            android:background="@color/light_gray" />
+
+        <Spinner
+            android:id="@+id/searchresult_settings_spnr_sortBySpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/searchresult_settings_btn_checkAllAnnotations"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/searchresult_settings_btn_checkAllAnnotations" />
+
+        <Button
+            android:id="@+id/searchresult_settings_btn_uncheckAllAnnotations"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/searchresult_settings_btn_uncheckAllAnnotations" />
+    </LinearLayout>
+
+</RelativeLayout>
